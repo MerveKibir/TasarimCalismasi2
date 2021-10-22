@@ -121,17 +121,11 @@
     <Compile Include="AnaFrm.Designer.cs">
       <DependentUpon>AnaFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Musteriler.cs">
+    <Compile Include="MusteriFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Musteriler.Designer.cs">
-      <DependentUpon>Musteriler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MusterilerFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MusterilerFrm.Designer.cs">
-      <DependentUpon>MusterilerFrm.cs</DependentUpon>
+    <Compile Include="MusteriFrm.Designer.cs">
+      <DependentUpon>MusteriFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,11 +138,8 @@
     <EmbeddedResource Include="AnaFrm.resx">
       <DependentUpon>AnaFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Musteriler.resx">
-      <DependentUpon>Musteriler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MusterilerFrm.resx">
-      <DependentUpon>MusterilerFrm.cs</DependentUpon>
+    <EmbeddedResource Include="MusteriFrm.resx">
+      <DependentUpon>MusteriFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
