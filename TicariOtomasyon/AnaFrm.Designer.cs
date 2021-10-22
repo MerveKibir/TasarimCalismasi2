@@ -101,10 +101,10 @@ namespace TicariOtomasyon
             this.btnUrunler.Caption = "ÜRÜNLER";
             this.btnUrunler.Id = 1;
             this.btnUrunler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunler.ImageOptions.Image")));
-            this.btnUrunler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUrunler.ImageOptions.LargeImage")));
             this.btnUrunler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunler.ItemAppearance.Normal.Options.UseFont = true;
             this.btnUrunler.Name = "btnUrunler";
+            this.btnUrunler.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnUrunler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUrunler_ItemClick);
             // 
             // btnStoklar
@@ -112,30 +112,31 @@ namespace TicariOtomasyon
             this.btnStoklar.Caption = "STOKLAR";
             this.btnStoklar.Id = 2;
             this.btnStoklar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStoklar.ImageOptions.Image")));
-            this.btnStoklar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStoklar.ImageOptions.LargeImage")));
             this.btnStoklar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStoklar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnStoklar.Name = "btnStoklar";
+            this.btnStoklar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnMusteri
             // 
             this.btnMusteri.Caption = "MÜŞTERİLER";
             this.btnMusteri.Id = 3;
             this.btnMusteri.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMusteri.ImageOptions.Image")));
-            this.btnMusteri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMusteri.ImageOptions.LargeImage")));
             this.btnMusteri.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMusteri.ItemAppearance.Normal.Options.UseFont = true;
             this.btnMusteri.Name = "btnMusteri";
+            this.btnMusteri.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnMusteri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMusteri_ItemClick);
             // 
             // btnFirmalar
             // 
             this.btnFirmalar.Caption = "FİRMALAR";
             this.btnFirmalar.Id = 4;
             this.btnFirmalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirmalar.ImageOptions.Image")));
-            this.btnFirmalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFirmalar.ImageOptions.LargeImage")));
             this.btnFirmalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFirmalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnFirmalar.Name = "btnFirmalar";
+            this.btnFirmalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // a
             // 
@@ -158,20 +159,20 @@ namespace TicariOtomasyon
             this.btnGiderler.Caption = "GİDERLER";
             this.btnGiderler.Id = 7;
             this.btnGiderler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiderler.ImageOptions.Image")));
-            this.btnGiderler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGiderler.ImageOptions.LargeImage")));
             this.btnGiderler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiderler.ItemAppearance.Normal.Options.UseFont = true;
             this.btnGiderler.Name = "btnGiderler";
+            this.btnGiderler.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnKasa
             // 
             this.btnKasa.Caption = "KASA";
             this.btnKasa.Id = 8;
             this.btnKasa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKasa.ImageOptions.Image")));
-            this.btnKasa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKasa.ImageOptions.LargeImage")));
             this.btnKasa.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKasa.ItemAppearance.Normal.Options.UseFont = true;
             this.btnKasa.Name = "btnKasa";
+            this.btnKasa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnNotlar
             // 
@@ -188,40 +189,40 @@ namespace TicariOtomasyon
             this.btnBankalar.Caption = "BANKALAR";
             this.btnBankalar.Id = 11;
             this.btnBankalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBankalar.ImageOptions.Image")));
-            this.btnBankalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBankalar.ImageOptions.LargeImage")));
             this.btnBankalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBankalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnBankalar.Name = "btnBankalar";
+            this.btnBankalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnRehber
             // 
             this.btnRehber.Caption = "REHBER";
             this.btnRehber.Id = 12;
             this.btnRehber.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRehber.ImageOptions.Image")));
-            this.btnRehber.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRehber.ImageOptions.LargeImage")));
             this.btnRehber.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRehber.ItemAppearance.Normal.Options.UseFont = true;
             this.btnRehber.Name = "btnRehber";
+            this.btnRehber.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnFaturalar
             // 
             this.btnFaturalar.Caption = "FATURALAR";
             this.btnFaturalar.Id = 13;
             this.btnFaturalar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFaturalar.ImageOptions.Image")));
-            this.btnFaturalar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFaturalar.ImageOptions.LargeImage")));
             this.btnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnFaturalar.Name = "btnFaturalar";
+            this.btnFaturalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnAyarlar
             // 
             this.btnAyarlar.Caption = "AYARLAR";
             this.btnAyarlar.Id = 14;
             this.btnAyarlar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAyarlar.ImageOptions.Image")));
-            this.btnAyarlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAyarlar.ImageOptions.LargeImage")));
             this.btnAyarlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAyarlar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnAyarlar.Name = "btnAyarlar";
+            this.btnAyarlar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // barButtonItem13
             // 
@@ -236,20 +237,20 @@ namespace TicariOtomasyon
             this.btnPersonel.Caption = "PERSONEL";
             this.btnPersonel.Id = 17;
             this.btnPersonel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonel.ImageOptions.Image")));
-            this.btnPersonel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPersonel.ImageOptions.LargeImage")));
             this.btnPersonel.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPersonel.ItemAppearance.Normal.Options.UseFont = true;
             this.btnPersonel.Name = "btnPersonel";
+            this.btnPersonel.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnAnasayfa
             // 
             this.btnAnasayfa.Caption = "ANASAYFA";
             this.btnAnasayfa.Id = 18;
             this.btnAnasayfa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAnasayfa.ImageOptions.Image")));
-            this.btnAnasayfa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAnasayfa.ImageOptions.LargeImage")));
             this.btnAnasayfa.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAnasayfa.ItemAppearance.Normal.Options.UseFont = true;
             this.btnAnasayfa.Name = "btnAnasayfa";
+            this.btnAnasayfa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // ribbonPage1
             // 
@@ -345,6 +346,7 @@ namespace TicariOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.ribbonControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Name = "MainFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

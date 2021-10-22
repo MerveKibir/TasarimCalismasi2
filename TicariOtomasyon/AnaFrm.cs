@@ -12,6 +12,7 @@ namespace TicariOtomasyon
 {
     public partial class MainFrm : Form
     {
+        
         public MainFrm()
         {
             InitializeComponent();
@@ -24,6 +25,17 @@ namespace TicariOtomasyon
                 frm = new UrunlerFrm();
                 frm.MdiParent = this;
                 frm.Show();
+            }
+        }
+
+        MusteriFrm mstfrm;
+        private void btnMusteri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (mstfrm == null)
+            {
+                mstfrm = new MusteriFrm();
+                mstfrm.MdiParent = this;
+                mstfrm.Show();
             }
         }
     }
