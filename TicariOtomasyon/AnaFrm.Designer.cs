@@ -90,6 +90,7 @@ namespace TicariOtomasyon
             this.btnPersonel,
             this.btnAnasayfa});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -137,6 +138,7 @@ namespace TicariOtomasyon
             this.btnFirmalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnFirmalar.Name = "btnFirmalar";
             this.btnFirmalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnFirmalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFirmalar_ItemClick);
             // 
             // a
             // 

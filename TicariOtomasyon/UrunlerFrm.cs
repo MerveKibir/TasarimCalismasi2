@@ -18,9 +18,22 @@ namespace TicariOtomasyon
         {
             InitializeComponent();
         }
-
+        void FormClean()
+        {
+            txtAd.Text = "";
+            txtId.Text = "";
+            txtMarka.Text = "";
+            txtModel.Text = "";
+            txtYil.Text = "";
+            txtAlis.Text = "";
+            txtSatis.Text = "";
+            numAdet.Text = "";
+            rchDetay.Text = "";
+        }
         private void UrunlerFrm_Load(object sender, EventArgs e)
         {
+            FormClean();
+            txtId.Enabled = false;
             gridView1.OptionsBehavior.Editable = false;
             gridControl1.DataSource = (from ll in context.Urun_TB
                                        select ll).ToList();
@@ -44,6 +57,7 @@ namespace TicariOtomasyon
                     context.Urun_TB.Add(yeniUrun);
                     context.SaveChanges();
                     MessageBox.Show("Ürün ekleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormClean();
                     gridControl1.DataSource = (from ll in context.Urun_TB
                                                select ll).ToList();
                 }
@@ -68,6 +82,7 @@ namespace TicariOtomasyon
                     GuncellenecekUrun.Detay = rchDetay.Text;
                     context.SaveChanges();
                     MessageBox.Show("Ürün güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormClean();
                     gridControl1.DataSource = (from ll in context.Urun_TB
                                                select ll).ToList();
                 }
@@ -89,6 +104,7 @@ namespace TicariOtomasyon
                 context.Urun_TB.Remove(silinecekUrun);
                 context.SaveChanges();
                 MessageBox.Show("Ürün silme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormClean();
                 gridControl1.DataSource = (from ll in context.Urun_TB
                                            select ll).ToList();
             }
@@ -115,6 +131,19 @@ namespace TicariOtomasyon
             txtAlis.Text =liste.AlisFiyat.ToString();
             txtSatis.Text = liste.SatisFiyat.ToString();
             rchDetay.Text = liste.Detay;
+        }
+
+        private void BtnClean_Click(object sender, EventArgs e)
+        {
+            txtAd.Text = "";
+            txtId.Text = "";
+            txtMarka.Text = "";
+            txtModel.Text = "";
+            txtYil.Text = "";
+            txtAlis.Text = "";
+            txtSatis.Text = "";
+            numAdet.Text = "";
+            rchDetay.Text = "";
         }
     }
 }

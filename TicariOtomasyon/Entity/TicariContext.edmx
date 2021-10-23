@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TicariDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TicariDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Banka_TB">
           <Key>
             <PropertyRef Name="ID" />
@@ -51,6 +51,8 @@
           <Property Name="Ad" Type="nvarchar" MaxLength="50" />
           <Property Name="YetkiliStatu" Type="nvarchar" MaxLength="50" />
           <Property Name="YetkiliAdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="YetkiliTC" Type="char" MaxLength="11" />
+          <Property Name="Sektor" Type="nvarchar" MaxLength="50" />
           <Property Name="Telefon1" Type="nvarchar" MaxLength="15" />
           <Property Name="Telefon2" Type="nvarchar" MaxLength="15" />
           <Property Name="Telefon3" Type="nvarchar" MaxLength="15" />
@@ -60,6 +62,9 @@
           <Property Name="Ilce" Type="nvarchar" MaxLength="50" />
           <Property Name="VergiDaire" Type="nvarchar" MaxLength="50" />
           <Property Name="Adres" Type="nvarchar" MaxLength="150" />
+          <Property Name="OzelKod1" Type="nvarchar" MaxLength="10" />
+          <Property Name="OzelKod2" Type="nvarchar" MaxLength="10" />
+          <Property Name="OzelKod3" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Gider_TB">
           <Key>
@@ -88,6 +93,15 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Sehir" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Kodlar_TB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirmaKod1" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirmaKod2" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirmaKod3" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Musteri_TB">
           <Key>
@@ -161,14 +175,14 @@
           <EntitySet Name="Gider_TB" EntityType="Self.Gider_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ilceler_TB" EntityType="Self.Ilceler_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Iller_TB" EntityType="Self.Iller_TB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kodlar_TB" EntityType="Self.Kodlar_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Musteri_TB" EntityType="Self.Musteri_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Not_TB" EntityType="Self.Not_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personel_TB" EntityType="Self.Personel_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stok_TB" EntityType="Self.Stok_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun_TB" EntityType="Self.Urun_TB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TicariDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -227,6 +241,11 @@
           <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="VergiDaire" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Adres" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="YetkiliTC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="OzelKod1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OzelKod2" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OzelKod3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Sektor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Gider_TB">
           <Key>
@@ -333,7 +352,17 @@
           <EntitySet Name="Personel_TB" EntityType="Self.Personel_TB" />
           <EntitySet Name="Stok_TB" EntityType="Self.Stok_TB" />
           <EntitySet Name="Urun_TB" EntityType="Self.Urun_TB" />
+          <EntitySet Name="Kodlar_TB" EntityType="TicariDBModel.Kodlar_TB" />
         </EntityContainer>
+        <EntityType Name="Kodlar_TB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirmaKod1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaKod2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaKod3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -384,6 +413,11 @@
           <EntitySetMapping Name="Firma_TB">
             <EntityTypeMapping TypeName="TicariDBModel.Firma_TB">
               <MappingFragment StoreEntitySet="Firma_TB">
+                <ScalarProperty Name="Sektor" ColumnName="Sektor" />
+                <ScalarProperty Name="OzelKod3" ColumnName="OzelKod3" />
+                <ScalarProperty Name="OzelKod2" ColumnName="OzelKod2" />
+                <ScalarProperty Name="OzelKod1" ColumnName="OzelKod1" />
+                <ScalarProperty Name="YetkiliTC" ColumnName="YetkiliTC" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="YetkiliStatu" ColumnName="YetkiliStatu" />
@@ -497,6 +531,16 @@
                 <ScalarProperty Name="AlisFiyat" ColumnName="AlisFiyat" />
                 <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
                 <ScalarProperty Name="Detay" ColumnName="Detay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kodlar_TB">
+            <EntityTypeMapping TypeName="TicariDBModel.Kodlar_TB">
+              <MappingFragment StoreEntitySet="Kodlar_TB">
+                <ScalarProperty Name="FirmaKod3" ColumnName="FirmaKod3" />
+                <ScalarProperty Name="FirmaKod2" ColumnName="FirmaKod2" />
+                <ScalarProperty Name="FirmaKod1" ColumnName="FirmaKod1" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -37,5 +37,6 @@ namespace TicariOtomasyon.Entity
         public virtual DbSet<Personel_TB> Personel_TB { get; set; }
         public virtual DbSet<Stok_TB> Stok_TB { get; set; }
         public virtual DbSet<Urun_TB> Urun_TB { get; set; }
+        public virtual DbSet<Kodlar_TB> Kodlar_TB { get; set; }
     }
 }

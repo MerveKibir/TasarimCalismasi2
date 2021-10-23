@@ -17,26 +17,49 @@ namespace TicariOtomasyon
         {
             InitializeComponent();
         }
-        UrunlerFrm frm;
-        private void btnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+
+        public void FormKontrol(Form AcilanForm)
         {
-            if(frm==null)
+            bool Acikmi = false;
+            for (int i = 0; i < MdiChildren.Length; i++)
             {
-                frm = new UrunlerFrm();
-                frm.MdiParent = this;
-                frm.Show();
+                if (AcilanForm.Name == MdiChildren[i].Name)
+                {
+                    MdiChildren[i].Focus();
+                    Acikmi = true;
+                }
+            }
+            if (Acikmi == false)
+            {
+                AcilanForm.MdiParent = this;
+                AcilanForm.WindowState = FormWindowState.Maximized;
+                AcilanForm.Show();
+            }
+            else
+            {
+                AcilanForm.Refresh();
+                AcilanForm.Activate();
             }
         }
 
-        MusteriFrm mstfrm;
+        
+        private void btnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            UrunlerFrm frm = new UrunlerFrm();
+            FormKontrol(frm);
+        }
+
+        
         private void btnMusteri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (mstfrm == null)
-            {
-                mstfrm = new MusteriFrm();
-                mstfrm.MdiParent = this;
-                mstfrm.Show();
-            }
+            MusteriFrm frm = new MusteriFrm();
+            FormKontrol(frm);
+        }
+
+        private void btnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FirmalarFrm frm = new FirmalarFrm();
+            FormKontrol(frm);
         }
     }
 }

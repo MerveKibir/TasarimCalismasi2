@@ -19,62 +19,78 @@ namespace TicariOtomasyon
             InitializeComponent();
         }
 
+        void FormClean()
+        {
+            txtAd.Text = "";
+            txtId.Text = "";
+            txtSoyad.Text = "";
+            maskTc.Text = "";
+            maskTel1.Text = "";
+            maskTel2.Text = "";
+            txtemail.Text = "";
+            cbIl.Text = "";
+            cbIlce.Text = "";
+            rchAdres.Text = "";
+            txtVergi.Text = "";
+        }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            
-                Musteri_TB yeniMust = new Musteri_TB();
-                if (!context.Musteri_TB.Any(x => x.Tc == maskTc.Text))
-                {
-                    try
-                    {
-                        yeniMust.Ad = txtAd.Text;
-                        yeniMust.Soyad = txtSoyad.Text;
-                        yeniMust.Telefon = maskTel1.Text;
-                        yeniMust.Telefon2 = maskTel2.Text;
-                        yeniMust.Tc = maskTc.Text;
-                        yeniMust.Mail = txtemail.Text;
-                        yeniMust.Il = cbIl.Text;
-                        yeniMust.Ilce = cbIlce.Text;
-                        yeniMust.Adres = rchAdres.Text;
-                        yeniMust.VergiDairesi = txtVergi.Text;
-                        context.Musteri_TB.Add(yeniMust);
-                        context.SaveChanges();
-                        MessageBox.Show("Müşteri ekleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        gridControl1.DataSource = (from ll in context.Musteri_TB
-                                                   select ll).ToList();
-                    }
-                    catch (Exception)
-                    {
 
-                        MessageBox.Show("Müşteri eklenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+            Musteri_TB yeniMust = new Musteri_TB();
+            if (!context.Musteri_TB.Any(x => x.Tc == maskTc.Text))
+            {
+                try
+                {
+                    yeniMust.Ad = txtAd.Text;
+                    yeniMust.Soyad = txtSoyad.Text;
+                    yeniMust.Telefon = maskTel1.Text;
+                    yeniMust.Telefon2 = maskTel2.Text;
+                    yeniMust.Tc = maskTc.Text;
+                    yeniMust.Mail = txtemail.Text;
+                    yeniMust.Il = cbIl.Text;
+                    yeniMust.Ilce = cbIlce.Text;
+                    yeniMust.Adres = rchAdres.Text;
+                    yeniMust.VergiDairesi = txtVergi.Text;
+                    context.Musteri_TB.Add(yeniMust);
+                    context.SaveChanges();
+                    MessageBox.Show("Müşteri ekleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormClean();
+                    gridControl1.DataSource = (from ll in context.Musteri_TB
+                                               select ll).ToList();
                 }
-                else
+                catch (Exception)
                 {
-                    try
-                    {
-                        var GuncellenecekMusteri = context.Musteri_TB.First(x => x.Tc == maskTc.Text);
-                        GuncellenecekMusteri.Ad = txtAd.Text;
-                        GuncellenecekMusteri.Soyad = txtSoyad.Text;
-                        GuncellenecekMusteri.Telefon = maskTel1.Text;
-                        GuncellenecekMusteri.Telefon2 = maskTel2.Text;
-                        GuncellenecekMusteri.Mail = txtemail.Text;
-                        GuncellenecekMusteri.Il = cbIl.Text;
-                        GuncellenecekMusteri.Ilce = cbIlce.Text;
-                        GuncellenecekMusteri.Adres = rchAdres.Text;
-                        GuncellenecekMusteri.VergiDairesi = txtVergi.Text;
-                        context.SaveChanges();
-                        MessageBox.Show("Müşteri güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        gridControl1.DataSource = (from ll in context.Musteri_TB
-                                                   select ll).ToList();
-                    }
-                    catch (Exception)
-                    {
 
-                        MessageBox.Show("Müşteri güncellenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Müşteri eklenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                try
+                {
+                    var GuncellenecekMusteri = context.Musteri_TB.First(x => x.Tc == maskTc.Text);
+                    GuncellenecekMusteri.Ad = txtAd.Text;
+                    GuncellenecekMusteri.Soyad = txtSoyad.Text;
+                    GuncellenecekMusteri.Telefon = maskTel1.Text;
+                    GuncellenecekMusteri.Telefon2 = maskTel2.Text;
+                    GuncellenecekMusteri.Mail = txtemail.Text;
+                    GuncellenecekMusteri.Il = cbIl.Text;
+                    GuncellenecekMusteri.Ilce = cbIlce.Text;
+                    GuncellenecekMusteri.Adres = rchAdres.Text;
+                    GuncellenecekMusteri.VergiDairesi = txtVergi.Text;
+                    context.SaveChanges();
+                    MessageBox.Show("Müşteri güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FormClean();
+                    gridControl1.DataSource = (from ll in context.Musteri_TB
+                                               select ll).ToList();
+                }
+                catch (Exception)
+                {
 
-                
+                    MessageBox.Show("Müşteri güncellenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
 
         }
@@ -88,6 +104,7 @@ namespace TicariOtomasyon
                 context.Musteri_TB.Remove(silinecekMusteri);
                 context.SaveChanges();
                 MessageBox.Show("Müşteri silme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormClean();
                 gridControl1.DataSource = (from ll in context.Musteri_TB
                                            select ll).ToList();
             }
@@ -120,6 +137,7 @@ namespace TicariOtomasyon
 
         private void MusteriFrm_Load(object sender, EventArgs e)
         {
+            FormClean();
             txtId.Enabled = false;
             gridView1.OptionsBehavior.Editable = false;
             gridControl1.DataSource = (from ll in context.Musteri_TB
@@ -150,6 +168,21 @@ namespace TicariOtomasyon
                                                 Sehir = t.Sehir,
                                                 Ilce = t.Ilce
                                             }).ToList();
+        }
+
+        private void BtnClean_Click(object sender, EventArgs e)
+        {
+            txtAd.Text = "";
+            txtId.Text = "";
+            txtSoyad.Text = "";
+            maskTc.Text = "";
+            maskTel1.Text = "";
+            maskTel2.Text = "";
+            txtemail.Text = "";
+            cbIl.Text = "";
+            cbIlce.Text = "";
+            rchAdres.Text = "";
+            txtVergi.Text = "";
         }
     }
 }

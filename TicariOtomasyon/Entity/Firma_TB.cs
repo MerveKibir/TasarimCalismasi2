@@ -27,5 +27,10 @@ namespace TicariOtomasyon.Entity
         public string Ilce { get; set; }
         public string VergiDaire { get; set; }
         public string Adres { get; set; }
+        public string YetkiliTC { get; set; }
+        public string OzelKod1 { get; set; }
+        public string OzelKod2 { get; set; }
+        public string OzelKod3 { get; set; }
+        public string Sektor { get; set; }
     }
 }
