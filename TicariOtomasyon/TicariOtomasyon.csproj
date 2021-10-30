@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TemelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemelFrm.Designer.cs">
+      <DependentUpon>TemelFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Banka_TB.cs">
       <DependentUpon>TicariContext.tt</DependentUpon>
     </Compile>
@@ -136,8 +142,20 @@
     <Compile Include="MusteriFrm.Designer.cs">
       <DependentUpon>MusteriFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelFrm.Designer.cs">
+      <DependentUpon>PersonelFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RehberFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RehberFrm.Designer.cs">
+      <DependentUpon>RehberFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UrunlerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +171,9 @@
     <EmbeddedResource Include="MusteriFrm.resx">
       <DependentUpon>MusteriFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonelFrm.resx">
+      <DependentUpon>PersonelFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +184,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RehberFrm.resx">
+      <DependentUpon>RehberFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemelFrm.resx">
+      <DependentUpon>TemelFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UrunlerFrm.resx">
       <DependentUpon>UrunlerFrm.cs</DependentUpon>
     </EmbeddedResource>

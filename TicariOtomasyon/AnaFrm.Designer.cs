@@ -36,8 +36,6 @@ namespace TicariOtomasyon
             this.btnStoklar = new DevExpress.XtraBars.BarButtonItem();
             this.btnMusteri = new DevExpress.XtraBars.BarButtonItem();
             this.btnFirmalar = new DevExpress.XtraBars.BarButtonItem();
-            this.a = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnGiderler = new DevExpress.XtraBars.BarButtonItem();
             this.btnKasa = new DevExpress.XtraBars.BarButtonItem();
             this.btnNotlar = new DevExpress.XtraBars.BarButtonItem();
@@ -45,7 +43,6 @@ namespace TicariOtomasyon
             this.btnRehber = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturalar = new DevExpress.XtraBars.BarButtonItem();
             this.btnAyarlar = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPersonel = new DevExpress.XtraBars.BarButtonItem();
             this.btnAnasayfa = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -69,6 +66,8 @@ namespace TicariOtomasyon
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.ribbonControl1.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Red;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -77,8 +76,6 @@ namespace TicariOtomasyon
             this.btnStoklar,
             this.btnMusteri,
             this.btnFirmalar,
-            this.a,
-            this.barButtonItem5,
             this.btnGiderler,
             this.btnKasa,
             this.btnNotlar,
@@ -86,15 +83,15 @@ namespace TicariOtomasyon
             this.btnRehber,
             this.btnFaturalar,
             this.btnAyarlar,
-            this.barButtonItem13,
             this.btnPersonel,
             this.btnAnasayfa});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.Size = new System.Drawing.Size(1382, 183);
             // 
             // btnUrunler
@@ -139,22 +136,6 @@ namespace TicariOtomasyon
             this.btnFirmalar.Name = "btnFirmalar";
             this.btnFirmalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnFirmalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFirmalar_ItemClick);
-            // 
-            // a
-            // 
-            this.a.Caption = "ANASAYFA";
-            this.a.Id = 5;
-            this.a.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("a.ImageOptions.Image")));
-            this.a.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("a.ImageOptions.LargeImage")));
-            this.a.Name = "a";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "PERSONELLER";
-            this.barButtonItem5.Id = 6;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // btnGiderler
             // 
@@ -205,6 +186,7 @@ namespace TicariOtomasyon
             this.btnRehber.ItemAppearance.Normal.Options.UseFont = true;
             this.btnRehber.Name = "btnRehber";
             this.btnRehber.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnRehber.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRehber_ItemClick);
             // 
             // btnFaturalar
             // 
@@ -226,14 +208,6 @@ namespace TicariOtomasyon
             this.btnAyarlar.Name = "btnAyarlar";
             this.btnAyarlar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem13
-            // 
-            this.barButtonItem13.Caption = "PERSONELLER";
-            this.barButtonItem13.Id = 15;
-            this.barButtonItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
-            this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
-            this.barButtonItem13.Name = "barButtonItem13";
-            // 
             // btnPersonel
             // 
             this.btnPersonel.Caption = "PERSONEL";
@@ -243,6 +217,7 @@ namespace TicariOtomasyon
             this.btnPersonel.ItemAppearance.Normal.Options.UseFont = true;
             this.btnPersonel.Name = "btnPersonel";
             this.btnPersonel.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnPersonel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPersonel_ItemClick);
             // 
             // btnAnasayfa
             // 
@@ -253,6 +228,7 @@ namespace TicariOtomasyon
             this.btnAnasayfa.ItemAppearance.Normal.Options.UseFont = true;
             this.btnAnasayfa.Name = "btnAnasayfa";
             this.btnAnasayfa.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnAnasayfa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAnasayfa_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -369,8 +345,6 @@ namespace TicariOtomasyon
         private DevExpress.XtraBars.BarButtonItem btnStoklar;
         private DevExpress.XtraBars.BarButtonItem btnMusteri;
         private DevExpress.XtraBars.BarButtonItem btnFirmalar;
-        private DevExpress.XtraBars.BarButtonItem a;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnGiderler;
         private DevExpress.XtraBars.BarButtonItem btnKasa;
         private DevExpress.XtraBars.BarButtonItem btnNotlar;
@@ -388,7 +362,6 @@ namespace TicariOtomasyon
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem btnPersonel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btnAnasayfa;

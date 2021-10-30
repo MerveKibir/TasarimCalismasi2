@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraBars.Ribbon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,24 @@ namespace TicariOtomasyon
         private void btnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FirmalarFrm frm = new FirmalarFrm();
+            FormKontrol(frm);
+        }
+
+        private void btnPersonel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            PersonelFrm frm = new PersonelFrm();
+            FormKontrol(frm);
+        }
+
+        private void btnRehber_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            RehberFrm frm = new RehberFrm();
+            FormKontrol(frm);
+        }
+
+        private void btnAnasayfa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            TemelFrm frm = new TemelFrm();
             FormKontrol(frm);
         }
     }
