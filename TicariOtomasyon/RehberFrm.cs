@@ -18,13 +18,14 @@ namespace TicariOtomasyon
         {
             InitializeComponent();
         }
-
+        public static string mail { get; set; }
         private void RehberFrm_Load(object sender, EventArgs e)
         {
             gridView1.OptionsBehavior.Editable = false;
             gridControl1.DataSource = (from ll in context.Musteri_TB
                                        select new
                                        {
+                                           ID=ll.ID,
                                            AD=ll.Ad,
                                            SOYAD=ll.Soyad,
                                            TELEFON=ll.Telefon,
@@ -35,6 +36,7 @@ namespace TicariOtomasyon
             gridControl2.DataSource = (from ll in context.Firma_TB
                                        select new
                                        {
+                                           ID = ll.ID,
                                            AD = ll.Ad,
                                            YETKILI= ll.YetkiliAdSoyad,
                                            TELEFON = ll.Telefon1,
@@ -43,6 +45,27 @@ namespace TicariOtomasyon
                                            MAİL = ll.Mail,
                                            FAX=ll.Fax
                                        }).ToList();
+        }
+        bool MusteriMi;
+        private void gridControl2_DoubleClick(object sender, EventArgs e)
+        {
+            
+            int[] SelectedRowHandles = gridView2.GetSelectedRows();
+            string B = gridView2.GetRowCellValue(SelectedRowHandles[0], gridView2.Columns["ID"]).ToString();
+            int id = Convert.ToInt32(B);
+            MailFrm frm = new MailFrm(id);
+            frm.ShowDialog(); 
+        }
+
+        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        {
+            MusteriMi = true;
+            int[] SelectedRowHandles = gridView1.GetSelectedRows();
+            string B = gridView1.GetRowCellValue(SelectedRowHandles[0], gridView1.Columns["ID"]).ToString();
+            int id = Convert.ToInt32( B);
+
+            MailFrm frm = new MailFrm(id, MusteriMi);
+            frm.ShowDialog();
         }
     }
 }

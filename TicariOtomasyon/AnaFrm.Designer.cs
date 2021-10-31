@@ -1,4 +1,5 @@
 ﻿
+
 namespace TicariOtomasyon
 {
     partial class MainFrm
@@ -20,7 +21,6 @@ namespace TicariOtomasyon
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer üretilen kod
 
         /// <summary>
@@ -66,9 +66,14 @@ namespace TicariOtomasyon
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.AllowContentChangeAnimation = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl1.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Red;
+            this.ribbonControl1.ExpandCollapseItem.AllowHtmlText = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ExpandCollapseItem.AllowRightClickInMenu = false;
+            this.ribbonControl1.ExpandCollapseItem.CloseSubMenuOnClickMode = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.ExpandCollapseItem.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
@@ -89,10 +94,22 @@ namespace TicariOtomasyon
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.OptionsPageCategories.AutoCorrectForeColor = DevExpress.Utils.DefaultBoolean.True;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1382, 183);
+            this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowMoreCommandsButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowPageHeadersInFormCaption = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
+            this.ribbonControl1.ShowToolbarCustomizeItem = false;
+            this.ribbonControl1.Size = new System.Drawing.Size(1382, 153);
+            this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
+            this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this.ribbonControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.ribbonControl1_Paint);
             // 
             // btnUrunler
             // 
@@ -146,6 +163,7 @@ namespace TicariOtomasyon
             this.btnGiderler.ItemAppearance.Normal.Options.UseFont = true;
             this.btnGiderler.Name = "btnGiderler";
             this.btnGiderler.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnGiderler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGiderler_ItemClick);
             // 
             // btnKasa
             // 

@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="TicariDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin_TB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Admin" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parola" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Banka_TB">
           <Key>
             <PropertyRef Name="ID" />
@@ -78,6 +86,8 @@
           <Property Name="Maaşlar" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Ekstra" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Detay" Type="nvarchar" MaxLength="500" />
+          <Property Name="Ay" Type="nvarchar" MaxLength="10" />
+          <Property Name="Yil" Type="char" MaxLength="4" />
         </EntityType>
         <EntityType Name="Ilceler_TB">
           <Key>
@@ -99,9 +109,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirmaKod1" Type="nvarchar" MaxLength="100" />
-          <Property Name="FirmaKod2" Type="nvarchar" MaxLength="100" />
-          <Property Name="FirmaKod3" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirmaKod1" Type="nvarchar" MaxLength="300" />
+          <Property Name="FirmaKod2" Type="nvarchar" MaxLength="300" />
+          <Property Name="FirmaKod3" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="Musteri_TB">
           <Key>
@@ -168,6 +178,7 @@
           <Property Name="Detay" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="TicariDBModelStoreContainer">
+          <EntitySet Name="Admin_TB" EntityType="Self.Admin_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Banka_TB" EntityType="Self.Banka_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FaturaBilgi_TB" EntityType="Self.FaturaBilgi_TB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FaturaDetay_TB" EntityType="Self.FaturaDetay_TB" Schema="dbo" store:Type="Tables" />
@@ -259,6 +270,8 @@
           <Property Name="Maaşlar" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Ekstra" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Detay" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Ay" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Yil" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="Ilceler_TB">
           <Key>
@@ -353,15 +366,24 @@
           <EntitySet Name="Stok_TB" EntityType="Self.Stok_TB" />
           <EntitySet Name="Urun_TB" EntityType="Self.Urun_TB" />
           <EntitySet Name="Kodlar_TB" EntityType="TicariDBModel.Kodlar_TB" />
+          <EntitySet Name="Admin_TB" EntityType="TicariDBModel.Admin_TB" />
         </EntityContainer>
         <EntityType Name="Kodlar_TB">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirmaKod1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="FirmaKod2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="FirmaKod3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaKod1" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaKod2" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaKod3" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Admin_TB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Admin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -437,6 +459,8 @@
           <EntitySetMapping Name="Gider_TB">
             <EntityTypeMapping TypeName="TicariDBModel.Gider_TB">
               <MappingFragment StoreEntitySet="Gider_TB">
+                <ScalarProperty Name="Yil" ColumnName="Yil" />
+                <ScalarProperty Name="Ay" ColumnName="Ay" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Elektrik" ColumnName="Elektrik" />
                 <ScalarProperty Name="Su" ColumnName="Su" />
@@ -541,6 +565,15 @@
                 <ScalarProperty Name="FirmaKod2" ColumnName="FirmaKod2" />
                 <ScalarProperty Name="FirmaKod1" ColumnName="FirmaKod1" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin_TB">
+            <EntityTypeMapping TypeName="TicariDBModel.Admin_TB">
+              <MappingFragment StoreEntitySet="Admin_TB">
+                <ScalarProperty Name="Parola" ColumnName="Parola" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

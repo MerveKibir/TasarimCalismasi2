@@ -12,17 +12,10 @@ namespace TicariOtomasyon.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class Gider_TB
+    public partial class Admin_TB
     {
-        public int ID { get; set; }
-        public Nullable<decimal> Elektrik { get; set; }
-        public Nullable<decimal> Su { get; set; }
-        public Nullable<decimal> DoğalGaz { get; set; }
-        public Nullable<decimal> Internet { get; set; }
-        public Nullable<decimal> Maaşlar { get; set; }
-        public Nullable<decimal> Ekstra { get; set; }
-        public string Detay { get; set; }
-        public string Ay { get; set; }
-        public string Yil { get; set; }
+        public int Id { get; set; }
+        public string Admin { get; set; }
+        public string Parola { get; set; }
     }
 }

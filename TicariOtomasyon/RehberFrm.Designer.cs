@@ -29,6 +29,7 @@ namespace TicariOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RehberFrm));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -60,8 +61,9 @@ namespace TicariOtomasyon
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1356, 499);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1356, 497);
             this.xtraTabPage1.Text = "MÜŞTERİLER";
             // 
             // gridControl1
@@ -76,14 +78,15 @@ namespace TicariOtomasyon
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(176)))), ((int)(((byte)(204)))));
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(145)))), ((int)(((byte)(176)))));
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.Row.BorderColor = System.Drawing.Color.Transparent;
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.Options.UseBorderColor = true;
@@ -101,8 +104,9 @@ namespace TicariOtomasyon
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1356, 499);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1356, 497);
             this.xtraTabPage2.Text = "FİRMALAR";
             // 
             // gridControl2
@@ -117,14 +121,15 @@ namespace TicariOtomasyon
             this.gridControl2.TabIndex = 2;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.gridControl2.DoubleClick += new System.EventHandler(this.gridControl2_DoubleClick);
             // 
             // gridView2
             // 
             this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView2.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(176)))), ((int)(((byte)(204)))));
+            this.gridView2.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.Row.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView2.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(145)))), ((int)(((byte)(176)))));
+            this.gridView2.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.gridView2.Appearance.Row.Options.UseBackColor = true;
             this.gridView2.DetailHeight = 682;
             this.gridView2.GridControl = this.gridControl2;

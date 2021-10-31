@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraBars.Ribbon.ViewInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace TicariOtomasyon
 {
     public partial class MainFrm : Form
     {
-        
+        RibbonControl ribbonn = new RibbonControl();
         public MainFrm()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace TicariOtomasyon
             }
         }
 
+        
         
         private void btnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -77,7 +79,23 @@ namespace TicariOtomasyon
 
         private void btnAnasayfa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TemelFrm frm = new TemelFrm();
+            
+        }
+
+        private void ribbonControl1_Paint(object sender, PaintEventArgs e)
+        {
+            RibbonControl ribbon = sender as RibbonControl;
+            RibbonPageHeaderViewInfo viewInfo = ribbon.ViewInfo.Header;
+            Rectangle rect = new Rectangle(0 ,0, viewInfo.Bounds.Width, viewInfo.Bounds.Height);
+            using (SolidBrush brush = new SolidBrush(Color.Teal))
+            {
+                e.Graphics.FillRectangle(brush, rect);
+            }
+        }
+
+        private void btnGiderler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GiderFrm frm = new GiderFrm();
             FormKontrol(frm);
         }
     }

@@ -93,11 +93,19 @@ namespace TicariOtomasyon
             // 
             this.BtnClean.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnClean.Appearance.Options.UseFont = true;
+            this.BtnClean.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.BtnClean.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.BtnClean.AppearanceHovered.Options.UseBackColor = true;
+            this.BtnClean.AppearanceHovered.Options.UseBorderColor = true;
+            this.BtnClean.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.BtnClean.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.BtnClean.AppearancePressed.Options.UseBackColor = true;
+            this.BtnClean.AppearancePressed.Options.UseBorderColor = true;
             this.BtnClean.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.ImageOptions.Image")));
-            this.BtnClean.Location = new System.Drawing.Point(1039, 173);
+            this.BtnClean.Location = new System.Drawing.Point(1060, 180);
             this.BtnClean.Margin = new System.Windows.Forms.Padding(10);
             this.BtnClean.Name = "BtnClean";
-            this.BtnClean.Size = new System.Drawing.Size(212, 48);
+            this.BtnClean.Size = new System.Drawing.Size(171, 48);
             this.BtnClean.TabIndex = 24;
             this.BtnClean.Text = "Temizle";
             this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
@@ -106,11 +114,19 @@ namespace TicariOtomasyon
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnKaydet.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnKaydet.AppearanceHovered.Options.UseBackColor = true;
+            this.btnKaydet.AppearanceHovered.Options.UseBorderColor = true;
+            this.btnKaydet.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnKaydet.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnKaydet.AppearancePressed.Options.UseBackColor = true;
+            this.btnKaydet.AppearancePressed.Options.UseBorderColor = true;
             this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(1039, 48);
+            this.btnKaydet.Location = new System.Drawing.Point(1060, 55);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(212, 48);
+            this.btnKaydet.Size = new System.Drawing.Size(171, 48);
             this.btnKaydet.TabIndex = 21;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -142,7 +158,7 @@ namespace TicariOtomasyon
             this.panelControl1.Location = new System.Drawing.Point(10, 10);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(974, 249);
+            this.panelControl1.Size = new System.Drawing.Size(947, 249);
             this.panelControl1.TabIndex = 23;
             // 
             // cbIlce
@@ -158,7 +174,7 @@ namespace TicariOtomasyon
             this.cbIlce.Properties.NullText = "";
             this.cbIlce.Properties.PopupSizeable = false;
             this.cbIlce.Properties.ValueMember = "Id";
-            this.cbIlce.Size = new System.Drawing.Size(346, 24);
+            this.cbIlce.Size = new System.Drawing.Size(300, 24);
             this.cbIlce.TabIndex = 51;
             // 
             // maskTc
@@ -168,56 +184,56 @@ namespace TicariOtomasyon
             this.maskTc.Margin = new System.Windows.Forms.Padding(6);
             this.maskTc.Mask = "00000000000";
             this.maskTc.Name = "maskTc";
-            this.maskTc.Size = new System.Drawing.Size(346, 26);
+            this.maskTc.Size = new System.Drawing.Size(300, 26);
             this.maskTc.TabIndex = 49;
             this.maskTc.ValidatingType = typeof(int);
             // 
             // maskTel2
             // 
             this.maskTel2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskTel2.Location = new System.Drawing.Point(164, 159);
+            this.maskTel2.Location = new System.Drawing.Point(164, 161);
             this.maskTel2.Margin = new System.Windows.Forms.Padding(6);
             this.maskTel2.Mask = "(999) 000-0000";
             this.maskTel2.Name = "maskTel2";
-            this.maskTel2.Size = new System.Drawing.Size(286, 26);
+            this.maskTel2.Size = new System.Drawing.Size(300, 26);
             this.maskTel2.TabIndex = 48;
             // 
             // labelControl10
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl10.Appearance.Options.UseFont = true;
             this.labelControl10.Appearance.Options.UseForeColor = true;
             this.labelControl10.Location = new System.Drawing.Point(23, 199);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(106, 20);
+            this.labelControl10.Size = new System.Drawing.Size(97, 19);
             this.labelControl10.TabIndex = 47;
             this.labelControl10.Text = "Vergi Dairesi:";
             // 
             // labelControl9
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Appearance.Options.UseForeColor = true;
             this.labelControl9.Location = new System.Drawing.Point(506, 160);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(50, 20);
+            this.labelControl9.Size = new System.Drawing.Size(45, 19);
             this.labelControl9.TabIndex = 46;
             this.labelControl9.Text = "Adres:";
             // 
             // id
             // 
-            this.id.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.id.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.id.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.id.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.id.Appearance.Options.UseFont = true;
             this.id.Appearance.Options.UseForeColor = true;
             this.id.Location = new System.Drawing.Point(23, 15);
             this.id.Margin = new System.Windows.Forms.Padding(6);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(24, 19);
+            this.id.Size = new System.Drawing.Size(22, 19);
             this.id.TabIndex = 30;
             this.id.Text = "ID:";
             // 
@@ -228,17 +244,17 @@ namespace TicariOtomasyon
             this.txtId.Name = "txtId";
             this.txtId.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtId.Properties.Appearance.Options.UseFont = true;
-            this.txtId.Size = new System.Drawing.Size(286, 24);
+            this.txtId.Size = new System.Drawing.Size(300, 24);
             this.txtId.TabIndex = 31;
             // 
             // maskTel1
             // 
             this.maskTel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskTel1.Location = new System.Drawing.Point(164, 121);
+            this.maskTel1.Location = new System.Drawing.Point(164, 123);
             this.maskTel1.Margin = new System.Windows.Forms.Padding(6);
             this.maskTel1.Mask = "(999) 000-0000";
             this.maskTel1.Name = "maskTel1";
-            this.maskTel1.Size = new System.Drawing.Size(286, 26);
+            this.maskTel1.Size = new System.Drawing.Size(300, 26);
             this.maskTel1.TabIndex = 32;
             // 
             // rchAdres
@@ -246,33 +262,33 @@ namespace TicariOtomasyon
             this.rchAdres.Location = new System.Drawing.Point(606, 158);
             this.rchAdres.Margin = new System.Windows.Forms.Padding(6);
             this.rchAdres.Name = "rchAdres";
-            this.rchAdres.Size = new System.Drawing.Size(346, 63);
+            this.rchAdres.Size = new System.Drawing.Size(300, 63);
             this.rchAdres.TabIndex = 45;
             this.rchAdres.Text = "";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(506, 15);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 20);
+            this.labelControl2.Size = new System.Drawing.Size(50, 19);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "TC No:";
             // 
             // txtVergi
             // 
-            this.txtVergi.Location = new System.Drawing.Point(164, 197);
+            this.txtVergi.Location = new System.Drawing.Point(164, 199);
             this.txtVergi.Margin = new System.Windows.Forms.Padding(6);
             this.txtVergi.Name = "txtVergi";
             this.txtVergi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtVergi.Properties.Appearance.Options.UseFont = true;
             this.txtVergi.Properties.Mask.BeepOnError = true;
             this.txtVergi.Properties.Mask.EditMask = "n2";
-            this.txtVergi.Size = new System.Drawing.Size(286, 24);
+            this.txtVergi.Size = new System.Drawing.Size(300, 24);
             this.txtVergi.TabIndex = 44;
             // 
             // txtemail
@@ -282,117 +298,117 @@ namespace TicariOtomasyon
             this.txtemail.Name = "txtemail";
             this.txtemail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtemail.Properties.Appearance.Options.UseFont = true;
-            this.txtemail.Size = new System.Drawing.Size(346, 24);
+            this.txtemail.Size = new System.Drawing.Size(300, 24);
             this.txtemail.TabIndex = 34;
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
             this.labelControl8.Location = new System.Drawing.Point(23, 162);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(43, 19);
+            this.labelControl8.Size = new System.Drawing.Size(40, 19);
             this.labelControl8.TabIndex = 43;
             this.labelControl8.Text = "Tel 2:";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(23, 52);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(26, 19);
+            this.labelControl3.Size = new System.Drawing.Size(24, 19);
             this.labelControl3.TabIndex = 35;
             this.labelControl3.Text = "Ad:";
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseForeColor = true;
             this.labelControl7.Location = new System.Drawing.Point(506, 125);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(33, 20);
+            this.labelControl7.Size = new System.Drawing.Size(31, 19);
             this.labelControl7.TabIndex = 42;
             this.labelControl7.Text = "İlçe:";
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(164, 49);
+            this.txtAd.Location = new System.Drawing.Point(164, 51);
             this.txtAd.Margin = new System.Windows.Forms.Padding(6);
             this.txtAd.Name = "txtAd";
             this.txtAd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAd.Properties.Appearance.Options.UseFont = true;
-            this.txtAd.Size = new System.Drawing.Size(286, 24);
+            this.txtAd.Size = new System.Drawing.Size(300, 24);
             this.txtAd.TabIndex = 36;
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.Location = new System.Drawing.Point(506, 92);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(17, 20);
+            this.labelControl6.Size = new System.Drawing.Size(15, 19);
             this.labelControl6.TabIndex = 41;
             this.labelControl6.Text = "İl:";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.Location = new System.Drawing.Point(23, 88);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(49, 19);
+            this.labelControl4.Size = new System.Drawing.Size(46, 19);
             this.labelControl4.TabIndex = 37;
             this.labelControl4.Text = "Soyad:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(506, 53);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(58, 20);
+            this.labelControl1.Size = new System.Drawing.Size(53, 19);
             this.labelControl1.TabIndex = 40;
             this.labelControl1.Text = "E-Mail:";
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(164, 85);
+            this.txtSoyad.Location = new System.Drawing.Point(164, 87);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(6);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSoyad.Properties.Appearance.Options.UseFont = true;
-            this.txtSoyad.Size = new System.Drawing.Size(286, 24);
+            this.txtSoyad.Size = new System.Drawing.Size(300, 24);
             this.txtSoyad.TabIndex = 38;
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(99)))), ((int)(((byte)(132)))));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
             this.labelControl5.Location = new System.Drawing.Point(23, 124);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(43, 19);
+            this.labelControl5.Size = new System.Drawing.Size(40, 19);
             this.labelControl5.TabIndex = 39;
             this.labelControl5.Text = "Tel 1:";
             // 
@@ -409,7 +425,7 @@ namespace TicariOtomasyon
             this.cbIl.Properties.NullText = "";
             this.cbIl.Properties.PopupSizeable = false;
             this.cbIl.Properties.ValueMember = "Plaka";
-            this.cbIl.Size = new System.Drawing.Size(346, 24);
+            this.cbIl.Size = new System.Drawing.Size(300, 24);
             this.cbIl.TabIndex = 50;
             this.cbIl.EditValueChanged += new System.EventHandler(this.cbIl_EditValueChanged);
             // 
@@ -417,11 +433,19 @@ namespace TicariOtomasyon
             // 
             this.btnSil.Appearance.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.Appearance.Options.UseFont = true;
+            this.btnSil.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnSil.AppearanceHovered.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnSil.AppearanceHovered.Options.UseBackColor = true;
+            this.btnSil.AppearanceHovered.Options.UseBorderColor = true;
+            this.btnSil.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnSil.AppearancePressed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.btnSil.AppearancePressed.Options.UseBackColor = true;
+            this.btnSil.AppearancePressed.Options.UseBorderColor = true;
             this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.Location = new System.Drawing.Point(1039, 108);
+            this.btnSil.Location = new System.Drawing.Point(1060, 115);
             this.btnSil.Margin = new System.Windows.Forms.Padding(6);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(212, 49);
+            this.btnSil.Size = new System.Drawing.Size(171, 49);
             this.btnSil.TabIndex = 22;
             this.btnSil.Text = "Sil";
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
@@ -443,10 +467,10 @@ namespace TicariOtomasyon
             // gridView1
             // 
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(176)))), ((int)(((byte)(204)))));
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(145)))), ((int)(((byte)(176)))));
+            this.gridView1.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.DetailHeight = 682;
             this.gridView1.GridControl = this.gridControl1;

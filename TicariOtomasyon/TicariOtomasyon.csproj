@@ -64,11 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TemelFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TemelFrm.Designer.cs">
-      <DependentUpon>TemelFrm.cs</DependentUpon>
+    <Compile Include="Entity\Admin_TB.cs">
+      <DependentUpon>TicariContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Entity\Banka_TB.cs">
       <DependentUpon>TicariContext.tt</DependentUpon>
@@ -136,6 +133,18 @@
     <Compile Include="FirmalarFrm.Designer.cs">
       <DependentUpon>FirmalarFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiderFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiderFrm.Designer.cs">
+      <DependentUpon>GiderFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailFrm.Designer.cs">
+      <DependentUpon>MailFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MusteriFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +177,12 @@
     <EmbeddedResource Include="FirmalarFrm.resx">
       <DependentUpon>FirmalarFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiderFrm.resx">
+      <DependentUpon>GiderFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailFrm.resx">
+      <DependentUpon>MailFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MusteriFrm.resx">
       <DependentUpon>MusteriFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +201,6 @@
     </Compile>
     <EmbeddedResource Include="RehberFrm.resx">
       <DependentUpon>RehberFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TemelFrm.resx">
-      <DependentUpon>TemelFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UrunlerFrm.resx">
       <DependentUpon>UrunlerFrm.cs</DependentUpon>
