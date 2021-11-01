@@ -31,8 +31,8 @@ namespace TicariOtomasyon
             maskTel3.Text = "";
             maskFax.Text = "";
             txtMail.Text = "";
-            cbIl.Text = "";
-            cbIlce.Text = "";
+            cbIl.EditValue = null;
+            cbIlce.EditValue = null;
             rchAdres.Text = "";
             txtVergi.Text = "";
             txtKod1.Text = "";
@@ -216,8 +216,8 @@ namespace TicariOtomasyon
             maskTel3.Text = "";
             maskFax.Text = "";
             txtMail.Text = "";
-            cbIl.Text = "";
-            cbIlce.Text = "";
+            cbIl.EditValue = null;
+            cbIlce.EditValue = null;
             rchAdres.Text = "";
             txtVergi.Text = "";
             txtKod1.Text = "";

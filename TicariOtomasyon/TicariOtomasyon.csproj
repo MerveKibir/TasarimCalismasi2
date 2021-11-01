@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankaFrm.Designer.cs">
+      <DependentUpon>BankaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\Admin_TB.cs">
       <DependentUpon>TicariContext.tt</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
     </Compile>
     <EmbeddedResource Include="AnaFrm.resx">
       <DependentUpon>AnaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankaFrm.resx">
+      <DependentUpon>BankaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FirmalarFrm.resx">
       <DependentUpon>FirmalarFrm.cs</DependentUpon>

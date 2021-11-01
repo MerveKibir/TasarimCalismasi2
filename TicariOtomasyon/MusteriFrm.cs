@@ -28,8 +28,8 @@ namespace TicariOtomasyon
             maskTel1.Text = "";
             maskTel2.Text = "";
             txtemail.Text = "";
-            cbIl.Text = "";
-            cbIlce.Text = "";
+            cbIl.EditValue = null;
+            cbIlce.EditValue = null;
             rchAdres.Text = "";
             txtVergi.Text = "";
         }
@@ -179,8 +179,8 @@ namespace TicariOtomasyon
             maskTel1.Text = "";
             maskTel2.Text = "";
             txtemail.Text = "";
-            cbIl.Text = "";
-            cbIlce.Text = "";
+            cbIl.EditValue = null;
+            cbIlce.EditValue = null;
             rchAdres.Text = "";
             txtVergi.Text = "";
         }

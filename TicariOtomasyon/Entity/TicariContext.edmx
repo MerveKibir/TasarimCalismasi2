@@ -23,8 +23,12 @@
           <Property Name="Iban" Type="nvarchar" MaxLength="50" />
           <Property Name="HesapNo" Type="nvarchar" MaxLength="50" />
           <Property Name="Yetkili" Type="nvarchar" MaxLength="50" />
-          <Property Name="Tarih" Type="smalldatetime" />
+          <Property Name="Tarih" Type="varchar" MaxLength="10" />
           <Property Name="HesapTuru" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirmaID" Type="int" />
+          <Property Name="Il" Type="nvarchar" MaxLength="13" />
+          <Property Name="Ilce" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefon" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="FaturaBilgi_TB">
           <Key>
@@ -79,6 +83,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ay" Type="nvarchar" MaxLength="10" />
+          <Property Name="Yil" Type="char" MaxLength="4" />
           <Property Name="Elektrik" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Su" Type="decimal" Precision="18" Scale="2" />
           <Property Name="DoğalGaz" Type="decimal" Precision="18" Scale="2" />
@@ -86,8 +92,6 @@
           <Property Name="Maaşlar" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Ekstra" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Detay" Type="nvarchar" MaxLength="500" />
-          <Property Name="Ay" Type="nvarchar" MaxLength="10" />
-          <Property Name="Yil" Type="char" MaxLength="4" />
         </EntityType>
         <EntityType Name="Ilceler_TB">
           <Key>
@@ -207,8 +211,12 @@
           <Property Name="Iban" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="HesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Yetkili" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Tarih" Type="DateTime" Precision="0" />
+          <Property Name="Tarih" Type="String" />
           <Property Name="HesapTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirmaID" Type="Int32" />
+          <Property Name="Il" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="FaturaBilgi_TB">
           <Key>
@@ -394,6 +402,10 @@
           <EntitySetMapping Name="Banka_TB">
             <EntityTypeMapping TypeName="TicariDBModel.Banka_TB">
               <MappingFragment StoreEntitySet="Banka_TB">
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="FirmaID" ColumnName="FirmaID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BankaAd" ColumnName="BankaAd" />
                 <ScalarProperty Name="Sube" ColumnName="Sube" />

@@ -194,6 +194,7 @@ namespace TicariOtomasyon
             this.btnBankalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnBankalar.Name = "btnBankalar";
             this.btnBankalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnBankalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBankalar_ItemClick);
             // 
             // btnRehber
             // 

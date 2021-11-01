@@ -98,5 +98,11 @@ namespace TicariOtomasyon
             GiderFrm frm = new GiderFrm();
             FormKontrol(frm);
         }
+
+        private void btnBankalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BankaFrm frm = new BankaFrm();
+            FormKontrol(frm);
+        }
     }
 }

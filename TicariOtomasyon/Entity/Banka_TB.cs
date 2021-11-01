@@ -20,7 +20,11 @@ namespace TicariOtomasyon.Entity
         public string Iban { get; set; }
         public string HesapNo { get; set; }
         public string Yetkili { get; set; }
-        public Nullable<System.DateTime> Tarih { get; set; }
+        public string Tarih { get; set; }
         public string HesapTuru { get; set; }
+        public Nullable<int> FirmaID { get; set; }
+        public string Il { get; set; }
+        public string Ilce { get; set; }
+        public string Telefon { get; set; }
     }
 }
