@@ -216,6 +216,7 @@ namespace TicariOtomasyon
             this.btnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnFaturalar.Name = "btnFaturalar";
             this.btnFaturalar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnFaturalar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalar_ItemClick);
             // 
             // btnAyarlar
             // 

@@ -437,7 +437,7 @@ namespace TicariOtomasyon
             this.Controls.Add(this.groupControl1);
             this.Name = "PersonelFrm";
             this.Text = "PERSONELLER";
-            this.Load += new System.EventHandler(this.PersonelFrm_Load);
+            this.Load += new System.EventHandler(this.PersonelFrm_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

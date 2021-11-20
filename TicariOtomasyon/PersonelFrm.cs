@@ -4,41 +4,51 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TicariOtomasyon.Entity;
+
 
 namespace TicariOtomasyon
 {
     public partial class PersonelFrm : Form
     {
-        TicariContext context = new TicariContext();
+        
         public PersonelFrm()
         {
             InitializeComponent();
         }
-
-        private void PersonelFrm_Load(object sender, EventArgs e)
+        public HttpClient Baglanti()
         {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:44380/");
+            return client;
+            
+        }
+        private async void PersonelFrm_LoadAsync(object sender, EventArgs e)
+        {
+            var client = Baglanti();
+            HttpResponseMessage response = await client.GetAsync("api/Personeller/getall");
+            string result = await response.Content.ReadAsStringAsync();
             FormClean();
             gridView1.OptionsBehavior.Editable = false;
-            gridControl1.DataSource = (from l in context.Personel_TB
-                                       select l).ToList();
-            cbIl.Properties.DataSource = (from p in context.Iller_TB
-                                          select new
-                                          {
-                                              Plaka = p.ID,
-                                              Il = p.Sehir
-                                          }).ToList();
-            cbIlce.Properties.DataSource = (from t in context.Ilceler_TB
-                                            select new
-                                            {
-                                                Id = t.ID,
-                                                Sehir = t.Sehir,
-                                                Ilce = t.Ilce
-                                            }).ToList();
-            txtId.Enabled = false;
+            gridControl1.DataSource = result;
+            //cbIl.Properties.DataSource = (from p in context.Iller_TB
+            //                              select new
+            //                              {
+            //                                  Plaka = p.ID,
+            //                                  Il = p.Sehir
+            //                              }).ToList();
+            //cbIlce.Properties.DataSource = (from t in context.Ilceler_TB
+            //                                select new
+            //                                {
+            //                                    Id = t.ID,
+            //                                    Sehir = t.Sehir,
+            //                                    Ilce = t.Ilce
+            //                                }).ToList();
+            //txtId.Enabled = false;
         }
         void FormClean()
         {
@@ -56,79 +66,79 @@ namespace TicariOtomasyon
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            Personel_TB yeniPersonel = new Personel_TB();
-            if (!context.Personel_TB.Any(x => x.Tc == maskTc.Text))
-            {
-                try
-                {
-                    yeniPersonel.Ad = txtAd.Text;
-                    yeniPersonel.Soyad = txtSoyad.Text;
-                    yeniPersonel.Telefon = maskTel1.Text;
-                    yeniPersonel.Tc = maskTc.Text;
-                    yeniPersonel.Mail = txtemail.Text;
-                    yeniPersonel.Il = cbIl.Text;
-                    yeniPersonel.Ilce = cbIlce.Text;
-                    yeniPersonel.Adres = rchAdres.Text;
-                    yeniPersonel.Gorev = txtGorev.Text;
-                    context.Personel_TB.Add(yeniPersonel);
-                    context.SaveChanges();
-                    MessageBox.Show("Personel ekleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormClean();
-                    gridControl1.DataSource = (from ll in context.Personel_TB
-                                               select ll).ToList();
-                }
-                catch (Exception)
-                {
+            //Personel_TB yeniPersonel = new Personel_TB();
+            //if (!context.Personel_TB.Any(x => x.Tc == maskTc.Text))
+            //{
+            //    try
+            //    {
+            //        yeniPersonel.Ad = txtAd.Text;
+            //        yeniPersonel.Soyad = txtSoyad.Text;
+            //        yeniPersonel.Telefon = maskTel1.Text;
+            //        yeniPersonel.Tc = maskTc.Text;
+            //        yeniPersonel.Mail = txtemail.Text;
+            //        yeniPersonel.Il = cbIl.Text;
+            //        yeniPersonel.Ilce = cbIlce.Text;
+            //        yeniPersonel.Adres = rchAdres.Text;
+            //        yeniPersonel.Gorev = txtGorev.Text;
+            //        context.Personel_TB.Add(yeniPersonel);
+            //        context.SaveChanges();
+            //        MessageBox.Show("Personel ekleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        FormClean();
+            //        gridControl1.DataSource = (from ll in context.Personel_TB
+            //                                   select ll).ToList();
+            //    }
+            //    catch (Exception)
+            //    {
 
-                    MessageBox.Show("Personel eklenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                try
-                {
-                    var GuncellenecekPersonel = context.Personel_TB.First(x => x.Tc == maskTc.Text);
-                    GuncellenecekPersonel.Ad = txtAd.Text;
-                    GuncellenecekPersonel.Soyad = txtSoyad.Text;
-                    GuncellenecekPersonel.Telefon = maskTel1.Text;
-                    GuncellenecekPersonel.Mail = txtemail.Text;
-                    GuncellenecekPersonel.Il = cbIl.Text;
-                    GuncellenecekPersonel.Ilce = cbIlce.Text;
-                    GuncellenecekPersonel.Adres = rchAdres.Text;
-                    GuncellenecekPersonel.Gorev = txtGorev.Text;
-                    context.SaveChanges();
-                    MessageBox.Show("Personel güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FormClean();
-                    gridControl1.DataSource = (from ll in context.Personel_TB
-                                               select ll).ToList();
-                }
-                catch (Exception)
-                {
+            //        MessageBox.Show("Personel eklenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+            //else
+            //{
+            //    try
+            //    {
+            //        var GuncellenecekPersonel = context.Personel_TB.First(x => x.Tc == maskTc.Text);
+            //        GuncellenecekPersonel.Ad = txtAd.Text;
+            //        GuncellenecekPersonel.Soyad = txtSoyad.Text;
+            //        GuncellenecekPersonel.Telefon = maskTel1.Text;
+            //        GuncellenecekPersonel.Mail = txtemail.Text;
+            //        GuncellenecekPersonel.Il = cbIl.Text;
+            //        GuncellenecekPersonel.Ilce = cbIlce.Text;
+            //        GuncellenecekPersonel.Adres = rchAdres.Text;
+            //        GuncellenecekPersonel.Gorev = txtGorev.Text;
+            //        context.SaveChanges();
+            //        MessageBox.Show("Personel güncelleme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        FormClean();
+            //        gridControl1.DataSource = (from ll in context.Personel_TB
+            //                                   select ll).ToList();
+            //    }
+            //    catch (Exception)
+            //    {
 
-                    MessageBox.Show("Personel güncellenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            //        MessageBox.Show("Personel güncellenemedi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
 
 
-            }
+            //}
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (txtId.Text != "")
-            {
-                int id = Convert.ToInt32(txtId.Text);
-                var silinecekPersonel = context.Personel_TB.First(x => x.ID == id);
-                context.Personel_TB.Remove(silinecekPersonel);
-                context.SaveChanges();
-                MessageBox.Show("Personel silme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FormClean();
-                gridControl1.DataSource = (from ll in context.Personel_TB
-                                           select ll).ToList();
-            }
-            else
-            {
-                MessageBox.Show("Lütfen silinecek personeli seçiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //if (txtId.Text != "")
+            //{
+            //    int id = Convert.ToInt32(txtId.Text);
+            //    var silinecekPersonel = context.Personel_TB.First(x => x.ID == id);
+            //    context.Personel_TB.Remove(silinecekPersonel);
+            //    context.SaveChanges();
+            //    MessageBox.Show("Personel silme işlemi başarılı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    FormClean();
+            //    gridControl1.DataSource = (from ll in context.Personel_TB
+            //                               select ll).ToList();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Lütfen silinecek personeli seçiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void BtnClean_Click(object sender, EventArgs e)
@@ -147,35 +157,35 @@ namespace TicariOtomasyon
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
         {
-            int[] SelectedRowHandles = gridView1.GetSelectedRows();
-            string B = gridView1.GetRowCellValue(SelectedRowHandles[0], gridView1.Columns["ID"]).ToString();
-            int deger1 = Convert.ToInt32(B);
-            var liste = (from c in context.Personel_TB
-                         where c.ID == deger1
-                         select c).SingleOrDefault();
-            txtId.Text = liste.ID.ToString();
-            txtAd.Text = liste.Ad;
-            txtSoyad.Text = liste.Soyad;
-            maskTel1.Text = liste.Telefon;
-            txtGorev.Text = liste.Gorev;
-            maskTc.Text = liste.Tc;
-            txtemail.Text = liste.Mail;
-            cbIl.Text = liste.Il;
-            cbIlce.Text = liste.Ilce;
-            rchAdres.Text = liste.Adres;
+            //int[] SelectedRowHandles = gridView1.GetSelectedRows();
+            //string B = gridView1.GetRowCellValue(SelectedRowHandles[0], gridView1.Columns["ID"]).ToString();
+            //int deger1 = Convert.ToInt32(B);
+            //var liste = (from c in context.Personel_TB
+            //             where c.ID == deger1
+            //             select c).SingleOrDefault();
+            //txtId.Text = liste.ID.ToString();
+            //txtAd.Text = liste.Ad;
+            //txtSoyad.Text = liste.Soyad;
+            //maskTel1.Text = liste.Telefon;
+            //txtGorev.Text = liste.Gorev;
+            //maskTc.Text = liste.Tc;
+            //txtemail.Text = liste.Mail;
+            //cbIl.Text = liste.Il;
+            //cbIlce.Text = liste.Ilce;
+            //rchAdres.Text = liste.Adres;
         }
 
         private void cbIl_EditValueChanged(object sender, EventArgs e)
         {
-            var dgr = Convert.ToInt32(cbIl.EditValue);
-            cbIlce.Properties.DataSource = (from t in context.Ilceler_TB
-                                            where t.Sehir == dgr
-                                            select new
-                                            {
-                                                Id = t.ID,
-                                                Sehir = t.Sehir,
-                                                Ilce = t.Ilce
-                                            }).ToList();
+            //var dgr = Convert.ToInt32(cbIl.EditValue);
+            //cbIlce.Properties.DataSource = (from t in context.Ilceler_TB
+            //                                where t.Sehir == dgr
+            //                                select new
+            //                                {
+            //                                    Id = t.ID,
+            //                                    Sehir = t.Sehir,
+            //                                    Ilce = t.Ilce
+            //                                }).ToList();
         }
     }
 }

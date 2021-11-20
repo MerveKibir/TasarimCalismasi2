@@ -126,7 +126,7 @@ namespace TicariOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 700);
+            this.ClientSize = new System.Drawing.Size(482, 653);
             this.Controls.Add(this.btnGonder);
             this.Controls.Add(this.rchMesaj);
             this.Controls.Add(this.txtKonu);

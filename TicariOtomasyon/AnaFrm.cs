@@ -104,5 +104,11 @@ namespace TicariOtomasyon
             BankaFrm frm = new BankaFrm();
             FormKontrol(frm);
         }
+
+        private void btnFaturalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FaturaFrm frm = new FaturaFrm();
+            FormKontrol(frm);
+        }
     }
 }
